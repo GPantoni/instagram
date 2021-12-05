@@ -28,7 +28,7 @@ export default function Navbar() {
 
 function Icones(props) {
     return (
-        <div class='{props.class}'>
+        <div class={props.class}>
             {props.name.map(item => <ion-icon name={item}></ion-icon>)}
         </div>
     )
