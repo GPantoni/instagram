@@ -1,4 +1,26 @@
 export default function Sugestoes() {
+    const arraySugestoes = [
+        {
+            nome: 'bad.vibes.memes',
+            eSeguidor: 'Segue você'
+        },
+        {
+            nome: 'chibirdart',
+            eSeguidor: 'Segue você'
+        },
+        {
+            nome: 'razoesparaacreditar',
+            eSeguidor: 'Novo no Instagram'
+        },
+        {
+            nome: 'adorable_animals',
+            eSeguidor: 'Segue você'
+        },
+        {
+            nome: 'smallcutecats',
+            eSeguidor: 'Segue você'
+        }
+    ];
     return (
         <div class="sugestoes">
             <div class="titulo">
@@ -6,65 +28,24 @@ export default function Sugestoes() {
                 <div>Ver tudo</div>
             </div>
 
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/bad.vibes.memes.svg" />
-                    <div class="texto">
-                        <div class="nome">bad.vibes.memes</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
+            {arraySugestoes.map(item => <Sugestao nome={item.nome} eSeguidor={item.eSeguidor} />)}
 
-                <div class="seguir">Seguir</div>
+        </div>
+    )
+}
+
+function Sugestao(props) {
+    return (
+        <div class="sugestao">
+            <div class="usuario">
+                <img src={`assets/img/${props.nome}.svg`} />
+                <div class="texto">
+                    <div class="nome">{props.nome}</div>
+                    <div class="razao">{props.eSeguidor}</div>
+                </div>
             </div>
 
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/chibirdart.svg" />
-                    <div class="texto">
-                        <div class="nome">chibirdart</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/razoesparaacreditar.svg" />
-                    <div class="texto">
-                        <div class="nome">razoesparaacreditar</div>
-                        <div class="razao">Novo no Instagram</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/adorable_animals.svg" />
-                    <div class="texto">
-                        <div class="nome">adorable_animals</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/smallcutecats.svg" />
-                    <div class="texto">
-                        <div class="nome">smallcutecats</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
+            <div class="seguir">Seguir</div>
         </div>
     )
 }
