@@ -1,13 +1,9 @@
+import Usuario from "./Usuario";
+
 export default function Sidebar() {
     return (
         <div class="sidebar">
-            <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
+            <Usuario nome='catanacomics' subNome='Catana' />
 
             <div class="sugestoes">
                 <div class="titulo">
